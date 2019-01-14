@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import * as _moment from 'moment';
 
+
 @Pipe({ name: 'ampm' })
 export class AMPMPipe implements PipeTransform {
     transform(str: any): string {

@@ -1,6 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {isUndefined} from 'util';
-import {ConfigurationConstants} from '../constants/configuration-constants';
 
 /*
  * this pipe will return integer part of the price string
@@ -10,7 +9,7 @@ import {ConfigurationConstants} from '../constants/configuration-constants';
 export class IntegerPartPipe implements PipeTransform {
     transform(value: any): string {
         if (isUndefined(value) || value === null) {
-            value = ConfigurationConstants.DEFAULT_PRICE + '';
+            value = '0.0';
         }
         value = value.toString();
         if (value.length === 0) {
@@ -33,7 +32,7 @@ export class IntegerPartPipe implements PipeTransform {
 export class DecimalPartPipe implements PipeTransform {
     transform(value: any, places: number = 2): string {
         if (isUndefined(value) || value === null) {
-            value = ConfigurationConstants.DEFAULT_PRICE + '';
+            value = '0.0';
         }
         value = value.toString();
         const indexVal = value.indexOf('.');
@@ -71,8 +70,7 @@ export class TotalPricePipe implements PipeTransform {
 export class FormatPricePipe implements PipeTransform {
     transform(value: any, places: number = 2): string {
         if ((isUndefined(value)) || (value === null) || (value === '')) {
-            value = ConfigurationConstants.DEFAULT_PRICE;
-        }
+            value = '0.0'     }
         value = ((Number(value) % 1) === 0) ? (value.toString() + '.000000') : (Number(value) * 1.00000001).toString();
         return value.match(/^-?\d+(?:\.\d{0,2})?/)[0];
     }

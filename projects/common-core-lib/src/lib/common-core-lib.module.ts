@@ -10,7 +10,7 @@ import { PhoneNumberPipe } from './pipes/phone-number.pipe';
 @NgModule({
   imports: [
   ],
-  declarations: [CommonCoreLibComponent, FooComponent, UcwordsPipe, IntegerPartPipe, DecimalPartPipe, TotalPricePipe, FormatPricePipe, GroupByPipe, PhoneNumberPipe],
-  exports: [CommonCoreLibComponent, FooComponent, UcwordsPipe, IntegerPartPipe, DecimalPartPipe, TotalPricePipe, FormatPricePipe, GroupByPipe, PhoneNumberPipe]
+  declarations: [CommonCoreLibComponent, FooComponent, UcwordsPipe, IntegerPartPipe, DecimalPartPipe, TotalPricePipe, FormatPricePipe, GroupByPipe, PhoneNumberPipe, AMPMPipe, OrderByPipe],
+  exports: [CommonCoreLibComponent, FooComponent, UcwordsPipe, IntegerPartPipe, DecimalPartPipe, TotalPricePipe, FormatPricePipe, GroupByPipe, PhoneNumberPipe, AMPMPipe, OrderByPipe]
 })
 export class CommonCoreLibModule { }
